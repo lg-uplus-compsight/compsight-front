@@ -5,20 +5,21 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap');
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
   }
 
   #app {
     background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+    height: 100vh;
+    width: 100vw;
   }
 
   p,
@@ -26,6 +27,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
+  .switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
 `;
 
 export default GlobalStyle;

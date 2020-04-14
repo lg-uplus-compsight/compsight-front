@@ -8,3 +8,9 @@
  * Follow this format:
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
+
+export const GET_ARTICLE = {
+  REQUEST: 'compsight/app/GET_ARTICLE_REQUEST',
+  SUCCESS: 'compsight/app/GET_ARTICLE_SUCCESS',
+  FAIL: 'compsight/app/GET_ARTICLE_FAIL',
+};
