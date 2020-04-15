@@ -9,17 +9,21 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   #app {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     height: 100vh;
     width: 100vw;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 
   p,
@@ -33,6 +37,9 @@ const GlobalStyle = createGlobalStyle`
 
 .switch-wrapper > div {
   position: absolute;
+}
+.hightlight {
+  color: "red"
 }
 `;
 
