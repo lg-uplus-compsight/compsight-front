@@ -11,6 +11,8 @@ import { useSelector } from 'react-redux';
 
 import { compose } from 'redux';
 import { Grid, Card, CardContent, Typography, Paper } from '@material-ui/core';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import PersonPinIcon from '@material-ui/icons/PersonPin';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -22,6 +24,7 @@ import reducer from './reducer';
 import saga from './saga';
 import { Wrapper } from './styles';
 import { theme } from '../../constants';
+import CouterWidget from '../../components/CouterWidget';
 
 const useStyles = makeStyles({
   root: {
@@ -38,6 +41,11 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 12,
+  },
+  counterIcon: {
+    color: 'white',
+    opacity: 0.7,
+    fontSize: 84,
   },
 });
 
@@ -56,7 +64,7 @@ export function WordCloudPage() {
   useInjectSaga({ key: 'wordCloudPage', saga });
 
   const appState = useSelector(state => state.app);
-  const { words, loading, articleList } = appState;
+  const { words, loading, articleList, uniquePeople } = appState;
   const classes = useStyles();
 
   return (
@@ -68,9 +76,34 @@ export function WordCloudPage() {
             sm={4}
             style={{ overflowY: 'auto', height: '100%', padding: 16 }}
           >
-            <Typography gutterBottom variant="h4" component="h4">
+            <Grid container spacing={3} style={{ marginBottom: 16 }}>
+              <Grid item sm={6}>
+                <CouterWidget
+                  color="#1f77b4"
+                  start={0}
+                  end={words.length}
+                  duration={3}
+                  title="키워드 추출 수"
+                >
+                  <VpnKeyIcon className={classes.counterIcon} />
+                </CouterWidget>
+              </Grid>
+              <Grid item sm={6}>
+                <CouterWidget
+                  color="#9467bd"
+                  start={0}
+                  end={uniquePeople.length}
+                  duration={3}
+                  title="인물 추출 수"
+                >
+                  <PersonPinIcon className={classes.counterIcon} />
+                </CouterWidget>
+              </Grid>
+            </Grid>
+
+            {/* <Typography gutterBottom variant="h4" component="h4">
               SK 키워드 추출
-            </Typography>
+            </Typography> */}
             {articleList.map(x => (
               <Card className={classes.root} key={x._id}>
                 <CardContent>
@@ -128,8 +161,6 @@ export function WordCloudPage() {
   );
 }
 
-WordCloudPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
+WordCloudPage.propTypes = {};
 
 export default compose(memo)(WordCloudPage);

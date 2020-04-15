@@ -32,15 +32,18 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5em;
   }
   .switch-wrapper {
-  position: relative;
-}
+    position: relative;
+  }
 
-.switch-wrapper > div {
-  position: absolute;
-}
-.hightlight {
-  color: "red"
-}
+  .switch-wrapper > div {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+  .hightlight {
+    color: "red"
+  }
+
 `;
 
 export default GlobalStyle;

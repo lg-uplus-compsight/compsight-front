@@ -9,20 +9,25 @@ function* getArticleSaga() {
 
   try {
     const keywordList = [];
+    const peopleList = [];
     const result = yield call(getRequest, { url });
     result.map(x => x.keywords.map(y => keywordList.push(y)));
+    result.map(x => x.people.map(y => peopleList.push(y)));
     const uniqueList = _.uniq(keywordList);
+    const uniquePeople = _.uniq(peopleList);
+
     const words = uniqueList.map(x => ({
       text: x,
       value: keywordList.filter(y => y === x).length,
     }));
-    console.log(words);
 
     // console.log(result);
     yield put({
       type: GET_ARTICLE.SUCCESS,
       result,
       words,
+      uniqueList,
+      uniquePeople,
     });
   } catch (error) {
     console.log(error);

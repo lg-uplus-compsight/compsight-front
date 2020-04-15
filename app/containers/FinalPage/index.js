@@ -20,8 +20,6 @@ export function FinalPage() {
   return <div>ChartPage</div>;
 }
 
-FinalPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
+FinalPage.propTypes = {};
 
 export default compose(memo)(FinalPage);
