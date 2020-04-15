@@ -117,7 +117,7 @@ export function WordCloudPage() {
                   <Typography variant="h5" component="h2">
                     <Highlighter
                       highlightStyle={{
-                        backgroundColor: '#f6ecf5',
+                        backgroundColor: theme.thirdColor,
                         borderRadius: 10,
                       }}
                       searchWords={x.keywords}

@@ -1,5 +1,7 @@
 export const theme = {
-  mainColor: '#3957F6',
+  mainColor: '#80D8EF',
+  subColor: '#7FEEBE',
+  thirdColor: '#7FEEEE',
   greyColor: '#555555',
 };
 
