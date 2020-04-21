@@ -94,11 +94,14 @@
     "react-router-transition": "^2.0.0",
     "react-spinners": "^0.8.1",
     "react-wordcloud": "^1.2.2",
+    "react-youtube": "^7.11.2",
+    "recharts": "^1.8.5",
     "redux": "4.0.1",
     "redux-saga": "1.0.2",
     "reselect": "4.0.0",
     "sanitize.css": "8.0.0",
-    "styled-components": "4.2.0"
+    "styled-components": "4.2.0",
+    "youtube-comment-api": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "7.4.3",

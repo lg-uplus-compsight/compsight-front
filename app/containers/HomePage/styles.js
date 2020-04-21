@@ -30,7 +30,7 @@ export const CompItem = styled.div`
   height: 200px;
   font-size: 1.5rem;
   margin-right: 1rem;
-  border: 1px solid ${props => props.theme.greyColor};
+  border: 1px solid ${props => props.theme.mainColor};
   &:last-child {
     margin-right: 0;
   }

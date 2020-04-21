@@ -14,3 +14,9 @@ export const GET_ARTICLE = {
   SUCCESS: 'compsight/app/GET_ARTICLE_SUCCESS',
   FAIL: 'compsight/app/GET_ARTICLE_FAIL',
 };
+
+export const GET_YOUTUBE_COMMENTS = {
+  REQUEST: 'compsight/app/GET_YOUTUBE_COMMENTS_REQUEST',
+  SUCCESS: 'compsight/app/GET_YOUTUBE_COMMENTS_SUCCESS',
+  FAIL: 'compsight/app/GET_YOUTUBE_COMMENTS_FAIL',
+};

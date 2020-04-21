@@ -43,6 +43,12 @@ const GlobalStyle = createGlobalStyle`
   .hightlight {
     color: "red"
   }
+  .full {
+   width: 100% 
+  }
+  text {
+    cursor: pointer;
+  }
 
 `;
 

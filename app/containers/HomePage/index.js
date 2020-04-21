@@ -11,27 +11,13 @@ import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
 import messages from './messages';
 import { Wrapper, QuestionText, CompWrapper, CompItem } from './styles';
-
-const compList = [
-  {
-    id: 0,
-    name: 'SKT',
-  },
-  {
-    id: 1,
-    name: 'LG U+',
-  },
-  {
-    id: 2,
-    name: 'KT',
-  },
-];
+import { compList } from '../../constants';
 
 export default function HomePage() {
   const dispatch = useDispatch();
 
-  const onClickComp = () => {
-    dispatch(push('/wordcloud'));
+  const onClickComp = x => {
+    dispatch(push(`/wordcloud/${x.id}`));
   };
 
   return (
@@ -39,7 +25,7 @@ export default function HomePage() {
       <QuestionText>세 기업중 어떤 기업이 궁금하신가요?</QuestionText>
       <CompWrapper>
         {compList.map(x => (
-          <CompItem onClick={onClickComp} key={x.id}>
+          <CompItem onClick={() => onClickComp(x)} key={x.id}>
             {x.name}
           </CompItem>
         ))}

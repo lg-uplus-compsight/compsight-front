@@ -12,6 +12,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage';
 import WordCloudPage from 'containers/WordCloudPage';
+import FinalPage from 'containers/FinalPage';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import { useInjectSaga } from 'utils/injectSaga';
 
@@ -57,21 +58,16 @@ export default function App() {
   useInjectSaga({ key: 'app', saga });
 
   useEffect(() => {
-    dispatch(getArticleAction());
+    dispatch(getArticleAction({}));
   }, []);
   return (
     <>
-      <AnimatedSwitch
-        atEnter={bounceTransition.atEnter}
-        atLeave={bounceTransition.atLeave}
-        atActive={bounceTransition.atActive}
-        mapStyles={mapStyles}
-        className="switch-wrapper"
-      >
+      <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/wordcloud" component={WordCloudPage} />
+        <Route exact path="/wordcloud/:compId" component={WordCloudPage} />
+        <Route exact path="/final/:query" component={FinalPage} />
         <Route component={NotFoundPage} />
-      </AnimatedSwitch>
+      </Switch>
       <GlobalStyle />
     </>
   );
