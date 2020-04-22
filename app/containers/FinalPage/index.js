@@ -75,7 +75,7 @@ export function FinalPage({ match }) {
   const { query } = match.params;
 
   const appState = useSelector(state => state.app);
-  const { youtubeLoading, mainVideo } = appState;
+  const { youtubeLoading, mainVideo, comments } = appState;
 
   return (
     <Wrapper>
@@ -162,14 +162,48 @@ export function FinalPage({ match }) {
         <Grid
           item
           sm={8}
-          style={{ padding: 16, height: '100%', width: '100%' }}
+          style={{
+            padding: 16,
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+          }}
         >
           <Grid
             container
             direction="column"
             style={{ height: '100%', width: '100%' }}
           >
-            <Paper>댓글</Paper>
+            <Grid item md={12}>
+              {comments.map(x => (
+                <Card className={classes.root}>
+                  <CardHeader
+                    avatar={
+                      <Avatar
+                        aria-label="recipe"
+                        className={classes.avatar}
+                        src={x.authorThumb}
+                      />
+                    }
+                    title={x.author}
+                    subheader={
+                      <Typography style={{ color: 'white', fontSize: 12 }}>
+                        {x.time}
+                      </Typography>
+                    }
+                  />
+                  <CardContent>
+                    <Typography
+                      variant="body2"
+                      style={{ color: 'white' }}
+                      component="p"
+                    >
+                      {x.text}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
