@@ -3,6 +3,8 @@ import _ from 'lodash';
 import { GET_ARTICLE, GET_YOUTUBE_COMMENTS } from './constants';
 import { API_URL } from '../../constants';
 import { getRequest } from '../../utils/request';
+import videoJson from './video.json';
+import commentJson from './comments.json';
 
 function* getArticleSaga(action) {
   const { createdAt } = action;
@@ -34,7 +36,9 @@ function* getYoutubeSaga(action) {
   const { query } = action;
   const url = `${API_URL}/comments?query=${query}`;
   try {
-    const { video, comments } = yield call(getRequest, { url });
+    // const { video, comments } = yield call(getRequest, { url });
+    const video = videoJson;
+    const comments = commentJson;
     yield put({
       type: GET_YOUTUBE_COMMENTS.SUCCESS,
       video,

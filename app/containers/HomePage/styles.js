@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const QuestionText = styled.h1`
-  color: ${props => props.theme.greyColor};
+  color: white;
 `;
 
 export const CompWrapper = styled.div`
@@ -22,7 +22,7 @@ export const CompWrapper = styled.div`
 export const CompItem = styled.div`
   display: flex;
   cursor: pointer;
-  color: ${props => props.theme.greyColor};
+  color: white;
   justify-content: center;
   border-radius: 20px;
   align-items: center;
@@ -30,7 +30,7 @@ export const CompItem = styled.div`
   height: 200px;
   font-size: 1.5rem;
   margin-right: 1rem;
-  border: 1px solid ${props => props.theme.mainColor};
+  border: 1px solid white;
   &:last-child {
     margin-right: 0;
   }

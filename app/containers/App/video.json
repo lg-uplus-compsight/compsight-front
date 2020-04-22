@@ -1,0 +1,159 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/rPqDPrdCVf-fJAXmAX2tudZrErU\"",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KR",
+  "pageInfo": { "totalResults": 421, "resultsPerPage": 5 },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/qahPZMwKxC5fWVhwHKibUrVvQZE\"",
+      "id": { "kind": "youtube#video", "videoId": "ID5lAHyMiSw" },
+      "snippet": {
+        "publishedAt": "2020-03-07T02:05:02.000Z",
+        "channelId": "UCA5vKQkvC9zlTDOSNtoMdCQ",
+        "title": "이런 출근 처음이야.. 👏🏻방 문 열고 출근하는 끄뇽이의 재택근무🛏🎶",
+        "description": "SK텔레콤 재택근무, 어디까지 알고있니...? 다들 궁금하셨죠? 방 문 열고 1분만에 출근하는 리얼 생생 후기 여기 있습니다 :-) SK 텔레콤 끄뇽이의...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ID5lAHyMiSw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ID5lAHyMiSw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ID5lAHyMiSw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "SK telecom",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/pbZ5qfjYaMCAGruSPUaDsvuPgWI\"",
+      "id": { "kind": "youtube#video", "videoId": "4Pli3gn66PA" },
+      "snippet": {
+        "publishedAt": "2020-04-09T08:57:53.000Z",
+        "channelId": "UCA5vKQkvC9zlTDOSNtoMdCQ",
+        "title": "재택근무 꿀팁 모음🛏 출근 1분컷! 집에서 일하는 노하우",
+        "description": "책상을 새로 사야하나? 중요한 업무는 어떻게 하지? 하루 종일 쉬지않고 일하는 걸까? 재택근무 7주차인 끄뇽과 지슈가 준비했습니다. !!!재택근무...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4Pli3gn66PA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4Pli3gn66PA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4Pli3gn66PA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "SK telecom",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/0MZhHSlWz-8qMzvCS5zogdDdlTU\"",
+      "id": { "kind": "youtube#video", "videoId": "SYO1o5UZE6c" },
+      "snippet": {
+        "publishedAt": "2020-02-26T08:56:29.000Z",
+        "channelId": "UCun_cV3OM0hwrondQjtLMtA",
+        "title": "[주식] 코로나 19 전국 확산 초비상! SKT 이어 KT도 전직원 재택근무 실시! 재택근무 확대 수혜주 긴급공개",
+        "description": "종목신청▽▽▽ http://youtube1.nicestock.co.kr/landing/youtube.php * 본 방송에서 제공하는 정보는 투자판단에 대한 참고용일 뿐, 해당 종목의 가치의...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SYO1o5UZE6c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SYO1o5UZE6c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SYO1o5UZE6c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "나이스스탁",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/o-fGQBmC8KUuFgymfOx5c_hecKI\"",
+      "id": { "kind": "youtube#video", "videoId": "pR3tFIAihaY" },
+      "snippet": {
+        "publishedAt": "2020-02-26T09:56:25.000Z",
+        "channelId": "UChlgI3UHCOnwUGzWzbJ3H5w",
+        "title": "SKT 직원 코로나19 1차 양성...SKT 타워 폐쇄 / YTN",
+        "description": "SK텔레콤 직원이 코로나19 감염증 1차 검진에서 양성 판정을 받았습니다. SK텔레콤은 본사 직원 한 명이 코로나19 검진에서 양성 판정을 받았다는...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pR3tFIAihaY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pR3tFIAihaY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pR3tFIAihaY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "YTN NEWS",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"nxOHAKTVB7baOKsQgTtJIyGxcs8/dXMn_-6w1diyyuv7VouAebosSHo\"",
+      "id": { "kind": "youtube#video", "videoId": "V9z_1EXf11E" },
+      "snippet": {
+        "publishedAt": "2020-03-11T12:06:26.000Z",
+        "channelId": "UCTHCOPwqNfZ0uiKOvFyhGwg",
+        "title": "SK텔레콤, 내일부터 콜센터 1,500명 재택근무 / 연합뉴스TV (YonhapnewsTV)",
+        "description": "SK텔레콤, 내일부터 콜센터 1500명 재택근무 SK텔레콤이 내일(12일)부터 코로나19 예방 차원에서 콜센터 직원을 대상으로 재택근무를 시행한다고...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V9z_1EXf11E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V9z_1EXf11E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V9z_1EXf11E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "연합뉴스TV",
+        "liveBroadcastContent": "none"
+      }
+    }
+  ]
+}

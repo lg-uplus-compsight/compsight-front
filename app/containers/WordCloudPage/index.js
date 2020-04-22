@@ -49,6 +49,8 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     marginBottom: 16,
+    backgroundColor: 'transparent',
+    color: 'white',
   },
   bullet: {
     display: 'inline-block',
@@ -56,10 +58,13 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
+    color: 'white',
   },
   counterIcon: {
     color: 'white',
@@ -109,7 +114,7 @@ export function WordCloudPage({ match }) {
   const callbacks = {
     onWordClick: word => {
       dispatch(push(`/final/${targetComp.name}${word.text}`));
-      dispatch(getYoutubeAction({ query: `${targetComp.name} ${word.text}` }));
+      dispatch(getYoutubeAction({ query: `${targetComp.value} ${word.text}` }));
     },
   };
 
@@ -127,7 +132,7 @@ export function WordCloudPage({ match }) {
         >
           <Grid container>
             <Grid item sm={12} style={{ paddingTop: 16, paddingBottom: 16 }}>
-              <Typography style={{ color: theme.greyColor }} variant="h4">
+              <Typography style={{ color: 'white' }} variant="h4">
                 {`${targetComp.name} News Insight`}
               </Typography>
             </Grid>
@@ -135,7 +140,7 @@ export function WordCloudPage({ match }) {
           <Grid container spacing={3} style={{ marginBottom: 16 }}>
             <Grid item sm={6} xs={6}>
               <CouterWidget
-                color={theme.mainColor}
+                color={theme.mainOpacity}
                 start={0}
                 end={words.length}
                 duration={3}
@@ -146,7 +151,7 @@ export function WordCloudPage({ match }) {
             </Grid>
             <Grid item sm={6} xs={6}>
               <CouterWidget
-                color={theme.subColor}
+                color={theme.subOpacity}
                 start={0}
                 end={uniquePeople.length}
                 duration={3}
@@ -168,25 +173,26 @@ export function WordCloudPage({ match }) {
                 height: '50vh',
               }}
             >
-              <Typography variant="h5">{createdAt}</Typography>
-              <Typography variant="h6">기사를 불러오는 중입니다</Typography>
+              <Typography style={{ color: 'white' }} variant="h5">
+                {createdAt}
+              </Typography>
+              <Typography style={{ color: 'white' }} variant="h6">
+                기사를 불러오는 중입니다
+              </Typography>
             </div>
           ) : (
             articleList.map(x => (
               <Card className={classes.root} key={x._id}>
                 <CardContent>
-                  <Typography
-                    className={classes.title}
-                    color="textSecondary"
-                    gutterBottom
-                  >
+                  <Typography className={classes.title} gutterBottom>
                     {x.publisher}
                   </Typography>
                   <Typography variant="h5" component="h2">
                     <Highlighter
                       highlightStyle={{
-                        backgroundColor: theme.thirdColor,
-                        borderRadius: 10,
+                        borderBottom: `3px solid ${theme.subColor}`,
+                        color: 'white',
+                        backgroundColor: 'transparent',
                       }}
                       searchWords={x.keywords}
                       autoEscape
@@ -216,24 +222,35 @@ export function WordCloudPage({ match }) {
             style={{ height: '100%', width: '100%' }}
           >
             <Grid item style={{ height: '40%', width: '100%' }}>
-              <Paper style={{ height: '100%', width: '100%', padding: 16 }}>
+              <Paper
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  padding: 16,
+                  backgroundColor: 'transparent',
+                }}
+              >
                 <ResponsiveContainer>
                   <BarChart data={dates}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis
                       dataKey="name"
                       tickLine={false}
+                      tick={{ stroke: 'white' }}
                       onClick={onClickLine}
                       padding={{ left: 50, right: 50 }}
                     />
-                    <YAxis axisLine={false} tickLine={false} />
-                    <Tooltip />
+                    <YAxis
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ stroke: 'white' }}
+                    />
                     <Bar
-                      barSize={30}
+                      barSize={40}
                       onClick={onClickLine}
                       type="monotone"
                       dataKey="count"
-                      fill={theme.mainColor}
+                      fill="white"
                     />
                   </BarChart>
                 </ResponsiveContainer>
@@ -246,6 +263,7 @@ export function WordCloudPage({ match }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  backgroundColor: 'rgba(255,255,255,0.7)',
                 }}
               >
                 {loading ? (

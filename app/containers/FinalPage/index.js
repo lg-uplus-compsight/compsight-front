@@ -37,6 +37,8 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     marginBottom: 16,
+    backgroundColor: 'transparent',
+    color: 'white',
   },
   bullet: {
     display: 'inline-block',
@@ -44,10 +46,13 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
+    color: 'white',
   },
   counterIcon: {
     color: 'white',
@@ -82,7 +87,7 @@ export function FinalPage({ match }) {
         >
           <Grid container>
             <Grid item sm={12} style={{ paddingTop: 16, paddingBottom: 16 }}>
-              <Typography style={{ color: theme.greyColor }} variant="h4">
+              <Typography style={{ color: 'white' }} variant="h4">
                 {`${query} YouTube Insight`}
               </Typography>
             </Grid>
@@ -90,7 +95,7 @@ export function FinalPage({ match }) {
           <Grid container spacing={3} style={{ marginBottom: 16 }}>
             <Grid item sm={6} xs={6}>
               <CouterWidget
-                color={theme.mainColor}
+                color={theme.mainOpacity}
                 start={0}
                 end={13}
                 duration={3}
@@ -101,7 +106,7 @@ export function FinalPage({ match }) {
             </Grid>
             <Grid item sm={6} xs={6}>
               <CouterWidget
-                color={theme.subColor}
+                color={theme.subOpacity}
                 start={0}
                 end={90}
                 duration={3}
@@ -127,22 +132,24 @@ export function FinalPage({ match }) {
             </div>
           ) : (
             <div>
-              <Card variant="outlined">
-                <CardHeader
-                  title={mainVideo.snippet.channelTitle}
-                  subheader={mainVideo.snippet.publishedAt}
-                />
+              <Card variant="outlined" className={classes.root}>
+                <CardHeader title={mainVideo.snippet.channelTitle} />
                 <YouTube
                   className="full"
                   videoId={mainVideo.id.videoId} // defaults -> null
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                    style={{ color: 'white' }}
+                  >
                     {decodeHtml(mainVideo.snippet.title)}
                   </Typography>
                   <Typography
                     variant="body2"
-                    color="textSecondary"
+                    style={{ color: 'white' }}
                     component="p"
                   >
                     {mainVideo.snippet.description}
