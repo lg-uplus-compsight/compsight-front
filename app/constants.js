@@ -30,6 +30,5 @@ export const compList = [
   },
 ];
 
-// export const API_URL = 'https://api.sumisa.io';
-// export const API_URL = 'https://compsight-back.herokuapp.com';
-export const API_URL = 'http://localhost:4500';
+export const API_URL = 'https://compsight-back.herokuapp.com';
+// export const API_URL = 'http://localhost:4500';
